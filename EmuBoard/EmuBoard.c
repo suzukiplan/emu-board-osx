@@ -30,18 +30,6 @@ void emu_init()
 }
 
 /**
- * 終了時に1回だけ呼び出される
- * この中でエミュレータの初期化処理を実行する想定
- */
-void emu_destroy()
-{
-    puts("emu_destroy");
-    if (!emu_initialized) return;
-    emu_initialized = 0;
-}
-
-
-/**
  * 画面の更新間隔（1秒間で60回）毎にこの関数がコールバックされる
  * この中で以下の処理を実行する想定:
  * 1. エミュレータのCPU処理を1フレーム分実行
@@ -60,4 +48,15 @@ void emu_vsync()
         int ptr = rand() % (VRAM_WIDTH * VRAM_HEIGHT);
         emu_vram[ptr] = (unsigned short)rand();
     }
+}
+
+/**
+ * 終了時に1回だけ呼び出される
+ * この中でエミュレータの初期化処理を実行する想定
+ */
+void emu_destroy()
+{
+    puts("emu_destroy");
+    if (!emu_initialized) return;
+    emu_initialized = 0;
 }
