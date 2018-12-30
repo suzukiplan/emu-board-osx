@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "VideoView.h"
 #import "constants.h"
+#import "EmuBoard.h"
 
 @interface ViewController() <NSWindowDelegate>
 @property (nonatomic) VideoView* video;
@@ -18,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // 初期サイズはVRAM表示サイズx2にしておく
+    emu_init();
     self.view.frame = CGRectMake(0, 0, VRAM_VIEW_WIDTH * 2, VRAM_VIEW_HEIGHT * 2);
     CALayer *layer = [CALayer layer];
     [layer setBackgroundColor:CGColorCreateGenericRGB(0.0, 0.0, 0.0, 1.0)];
@@ -67,9 +68,12 @@
 
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
-
     // Update the view, if already loaded.
 }
 
+- (void)dealloc
+{
+    emu_destroy();
+}
 
 @end

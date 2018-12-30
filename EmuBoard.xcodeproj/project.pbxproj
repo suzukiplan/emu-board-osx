@@ -15,6 +15,7 @@
 		94D1AB3E21D86DC900DC595E /* VideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D1AB3D21D86DC900DC595E /* VideoView.m */; };
 		94D1AB4121D86E0900DC595E /* VideoLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D1AB4021D86E0900DC595E /* VideoLayer.m */; };
 		94D1AB4721D8987800DC595E /* EmuBoard.c in Sources */ = {isa = PBXBuildFile; fileRef = 94D1AB4621D8987800DC595E /* EmuBoard.c */; };
+		94D1AB5421D8A59400DC595E /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D1AB5321D8A59400DC595E /* OpenAL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		94D1AB4221D8767900DC595E /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
 		94D1AB4321D87FFF00DC595E /* EmuBoard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmuBoard.h; sourceTree = "<group>"; };
 		94D1AB4621D8987800DC595E /* EmuBoard.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = EmuBoard.c; sourceTree = "<group>"; };
+		94D1AB5321D8A59400DC595E /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94D1AB5421D8A59400DC595E /* OpenAL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +56,7 @@
 			children = (
 				94D1AB2721D86ADC00DC595E /* EmuBoard */,
 				94D1AB2621D86ADC00DC595E /* Products */,
+				94D1AB5221D8A59400DC595E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +89,14 @@
 				94D1AB3621D86ADD00DC595E /* EmuBoard.entitlements */,
 			);
 			path = EmuBoard;
+			sourceTree = "<group>";
+		};
+		94D1AB5221D8A59400DC595E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94D1AB5321D8A59400DC595E /* OpenAL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
