@@ -23,5 +23,10 @@
     // Insert code here to tear down your application
 }
 
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication
+{
+    // Windowを閉じたらアプリを終了させる
+    return YES;
+}
 
 @end

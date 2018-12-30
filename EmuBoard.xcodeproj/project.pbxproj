@@ -12,6 +12,9 @@
 		94D1AB2F21D86ADD00DC595E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94D1AB2E21D86ADD00DC595E /* Assets.xcassets */; };
 		94D1AB3221D86ADD00DC595E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D1AB3021D86ADD00DC595E /* Main.storyboard */; };
 		94D1AB3521D86ADD00DC595E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D1AB3421D86ADD00DC595E /* main.m */; };
+		94D1AB3E21D86DC900DC595E /* VideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D1AB3D21D86DC900DC595E /* VideoView.m */; };
+		94D1AB4121D86E0900DC595E /* VideoLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D1AB4021D86E0900DC595E /* VideoLayer.m */; };
+		94D1AB4721D8987800DC595E /* EmuBoard.c in Sources */ = {isa = PBXBuildFile; fileRef = 94D1AB4621D8987800DC595E /* EmuBoard.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,13 @@
 		94D1AB3321D86ADD00DC595E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94D1AB3421D86ADD00DC595E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		94D1AB3621D86ADD00DC595E /* EmuBoard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmuBoard.entitlements; sourceTree = "<group>"; };
+		94D1AB3C21D86DC900DC595E /* VideoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoView.h; sourceTree = "<group>"; };
+		94D1AB3D21D86DC900DC595E /* VideoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoView.m; sourceTree = "<group>"; };
+		94D1AB3F21D86E0900DC595E /* VideoLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoLayer.h; sourceTree = "<group>"; };
+		94D1AB4021D86E0900DC595E /* VideoLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoLayer.m; sourceTree = "<group>"; };
+		94D1AB4221D8767900DC595E /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		94D1AB4321D87FFF00DC595E /* EmuBoard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmuBoard.h; sourceTree = "<group>"; };
+		94D1AB4621D8987800DC595E /* EmuBoard.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = EmuBoard.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,10 +67,17 @@
 		94D1AB2721D86ADC00DC595E /* EmuBoard */ = {
 			isa = PBXGroup;
 			children = (
+				94D1AB4221D8767900DC595E /* constants.h */,
 				94D1AB2821D86ADC00DC595E /* AppDelegate.h */,
 				94D1AB2921D86ADC00DC595E /* AppDelegate.m */,
 				94D1AB2B21D86ADC00DC595E /* ViewController.h */,
 				94D1AB2C21D86ADC00DC595E /* ViewController.m */,
+				94D1AB3C21D86DC900DC595E /* VideoView.h */,
+				94D1AB3D21D86DC900DC595E /* VideoView.m */,
+				94D1AB3F21D86E0900DC595E /* VideoLayer.h */,
+				94D1AB4021D86E0900DC595E /* VideoLayer.m */,
+				94D1AB4321D87FFF00DC595E /* EmuBoard.h */,
+				94D1AB4621D8987800DC595E /* EmuBoard.c */,
 				94D1AB2E21D86ADD00DC595E /* Assets.xcassets */,
 				94D1AB3021D86ADD00DC595E /* Main.storyboard */,
 				94D1AB3321D86ADD00DC595E /* Info.plist */,
@@ -139,9 +156,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94D1AB4721D8987800DC595E /* EmuBoard.c in Sources */,
+				94D1AB3E21D86DC900DC595E /* VideoView.m in Sources */,
 				94D1AB2D21D86ADC00DC595E /* ViewController.m in Sources */,
 				94D1AB3521D86ADD00DC595E /* main.m in Sources */,
 				94D1AB2A21D86ADC00DC595E /* AppDelegate.m in Sources */,
+				94D1AB4121D86E0900DC595E /* VideoLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
