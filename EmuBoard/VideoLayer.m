@@ -45,14 +45,13 @@ static volatile int bno;
     unsigned short* buf = imgbuf[1 - bno];
     unsigned short c;
     unsigned char r, g ,b;
-    // カラーコードを変更（VRAMはRGB565, CFImageはRGB555）
     int i = 0;
     int d = VRAM_WIDTH - VRAM_VIEW_WIDTH;
     for (int y = VRAM_VIEW_TOP; y < VRAM_VIEW_BOTTOM; y++) {
         int ptr = y * VRAM_WIDTH;
         for (int x = VRAM_VIEW_LEFT; x < VRAM_VIEW_RIGHT; x++) {
-            c = vram[ptr++];
-            // カラー変換 (エミュレータのVRAM仕様に併せて適宜ココを修正する)
+            c = emu_vram[ptr++];
+            // カラー変換 (RGB565 -> RGB555)
             r = (unsigned char)((c & 0xf800) >> 11);
             g = (unsigned char)((c & 0x07c0) >> 6);
             b = (unsigned char)(c & 0x001f);

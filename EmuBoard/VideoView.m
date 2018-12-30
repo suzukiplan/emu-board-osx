@@ -49,7 +49,7 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink, const CVTime
 
 - (void)vsync
 {
-    emu_tick();
+    emu_vsync();
     [self.videoLayer drawVRAM];
 }
 

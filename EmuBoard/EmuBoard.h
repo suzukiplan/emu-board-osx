@@ -7,5 +7,5 @@
 //
 
 #include "constants.h"
-extern unsigned short vram[VRAM_WIDTH * VRAM_HEIGHT];
-void emu_tick(void);
+extern unsigned short emu_vram[VRAM_WIDTH * VRAM_HEIGHT];
+void emu_vsync(void);
